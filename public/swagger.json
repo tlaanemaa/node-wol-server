@@ -1,0 +1,49 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "WOL-server",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/": {
+            "post": {
+                "summary": "Asks the server to send out a WOL packet",
+                "responses": {
+                    "200": {
+                        "description": "WOL packet sent"
+                    },
+                    "500": {
+                        "description": "Something broke"
+                    }
+                },
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/WakePayload"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "WakePayload": {
+                "properties": {
+                    "mac": {
+                        "type": "string",
+                        "description": "MAC address of the target device"
+                    },
+                    "port": {
+                        "type": "number",
+                        "description": "Target port",
+                        "default": 7
+                    }
+                }
+            }
+        }
+    }
+}
