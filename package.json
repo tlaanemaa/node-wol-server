@@ -1,0 +1,29 @@
+{
+  "name": "wol-server",
+  "version": "0.0.0",
+  "description": "Wake-on-lan server",
+  "main": "./src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tlaanemaa/node-wol-server.git"
+  },
+  "keywords": [
+    "wake-on-lan",
+    "rest-api",
+    "server",
+    "http"
+  ],
+  "author": "Taavi Laanemaa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tlaanemaa/node-wol-server/issues"
+  },
+  "homepage": "https://github.com/tlaanemaa/node-wol-server#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-wol": "^0.1.1"
+  }
+}
